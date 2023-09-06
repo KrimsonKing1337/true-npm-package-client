@@ -1,0 +1,22 @@
+{
+  "name": "true-npm-package-client",
+  "version": "0.0.1",
+  "description": "Example how to use your \"true\" npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "true-npm-package-core": "file:../true-npm-package-core/tgz/true-npm-package-core-0.0.2.tgz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrimsonKing1337/true-npm-package-client.git"
+  },
+  "author": "Oleg Shilov Jr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrimsonKing1337/true-npm-package-client/issues"
+  },
+  "homepage": "https://github.com/KrimsonKing1337/true-npm-package-client#readme"
+}
