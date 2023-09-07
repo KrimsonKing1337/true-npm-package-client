@@ -35,7 +35,24 @@ module.exports = (env = {}, argv) => {
       test: /\.tsx?$/,
       use: ['babel-loader'],
       exclude: /node_modules/,
-    }
+    },
+    {
+      test: /\.s?css$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            modules: {
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+            },
+          },
+        },
+        {
+          loader: 'sass-loader'
+        },
+      ],
+    },
   ];
 
   const buildDir = path.join(__dirname, 'dist');
