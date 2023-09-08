@@ -13,3 +13,4 @@ Example how to use it locally with ease and cheese.
 npm i
 npm run start
 ```
+Then go to http://localhost:3001
