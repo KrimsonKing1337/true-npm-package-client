@@ -16,7 +16,9 @@ const middleware = [
 
 export const store = configureStore({
   reducer,
-  middleware,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(middleware),
+  devTools: true,
 });
 
 sagaMiddleware.run(watchCounterActions);
