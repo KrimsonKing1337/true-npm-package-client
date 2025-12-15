@@ -7,7 +7,7 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-module.exports = (env = {}, argv) => {
+export default (env = {}, argv) => {
   const webpackMode = argv.mode;
 
   const isProd = webpackMode === 'production';
