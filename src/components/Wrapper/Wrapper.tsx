@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from 'react';
 
-import styles from './Wrapper.scss';
+import * as styles from './Wrapper.scss';
 
 export const Wrapper = ({ children }: PropsWithChildren) => {
   return (

@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const path = require('path');
@@ -10,7 +9,6 @@ module.exports = (env = {}, argv) => {
   const isProd = webpackMode === 'production';
 
   const plugins = [
-    new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
         diagnosticOptions: {
@@ -77,6 +75,7 @@ module.exports = (env = {}, argv) => {
       publicPath: '/',
       path: buildDir,
       filename: '[name].[contenthash].js',
+      clean: true,
     },
     target: !isProd ? 'web' : ['web', 'es5'],
     resolve: {
